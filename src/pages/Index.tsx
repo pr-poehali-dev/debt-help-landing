@@ -248,76 +248,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* TIMELINE */}
-      <section id="support" className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-10">
-            <h2 className="font-montserrat font-extrabold text-[#1A2340] text-[28px] md:text-[32px] mb-2">
-              Что происходит при просрочке?
-            </h2>
-            <p className="text-[#6B7280] text-[14px]">
-              Знайте последствия на каждом этапе — и обращайтесь к нам как можно раньше
-            </p>
-          </div>
 
-          {/* Desktop timeline dots */}
-          <div className="hidden md:flex items-center mb-8">
-            {timelineSteps.map((step, i) => (
-              <div key={i} className="flex items-center flex-1">
-                <div className="flex flex-col items-center">
-                  <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center shadow-md"
-                    style={{ backgroundColor: step.color }}
-                  >
-                    <Icon name={step.icon} size={24} className="text-white" fallback="Circle" />
-                  </div>
-                  <span
-                    className="font-montserrat font-extrabold text-[11px] mt-2 whitespace-nowrap tracking-wide"
-                    style={{ color: step.color }}
-                  >
-                    {step.label}
-                  </span>
-                </div>
-                {i < timelineSteps.length - 1 && (
-                  <div
-                    className="flex-1 h-1 mx-3"
-                    style={{ background: `linear-gradient(to right, ${step.color}, ${timelineSteps[i + 1].color})` }}
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4">
-            {timelineSteps.map((step, i) => (
-              <div
-                key={i}
-                className="rounded-xl p-5"
-                style={{ backgroundColor: step.bg, borderLeft: `4px solid ${step.border}` }}
-              >
-                <div className="md:hidden font-montserrat font-extrabold text-[12px] mb-3 tracking-wide uppercase" style={{ color: step.color }}>
-                  {step.label}
-                </div>
-                <ul className="space-y-3">
-                  {step.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2 text-[13px] text-[#1C1C1C] leading-snug">
-                      <span className="mt-0.5 font-bold flex-shrink-0" style={{ color: step.color }}>→</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-6 bg-blue-50 border border-blue-200 rounded-xl px-5 py-4 flex items-start gap-3">
-            <Icon name="Info" size={17} className="text-blue-500 flex-shrink-0 mt-0.5" />
-            <p className="text-[13px] text-[#1C1C1C] leading-relaxed">
-              <strong>Важно:</strong> Не игнорируйте наши сообщения. Свяжитесь с нами самостоятельно — мы обязательно найдём решение, подходящее именно вам. Даже на позднем этапе наша цель — помочь, а не взыскать.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section id="faq" className="py-16 bg-[#F4F5F7]">
