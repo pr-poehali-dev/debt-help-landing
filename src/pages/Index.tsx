@@ -219,10 +219,6 @@ export default function Index() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-end gap-10">
             <div className="flex-1 pb-14">
-              <div className="inline-flex items-center gap-2 bg-red-100 text-[#E8201A] text-[11px] font-montserrat font-bold uppercase tracking-widest px-3 py-1.5 rounded mb-6">
-                <Icon name="AlertCircle" size={13} />
-                Для клиентов с просроченной задолженностью
-              </div>
               <h1 className="font-montserrat font-black text-[#1A2340] text-[44px] md:text-[54px] leading-[1.05] uppercase mb-6">
                 ЧТО БУДЕТ,<br />ЕСЛИ Я НЕ<br />ОПЛАЧУ?
               </h1>
