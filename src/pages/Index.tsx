@@ -236,6 +236,42 @@ export default function Index() {
 
 
 
+      {/* FAQ */}
+      <section id="faq" className="py-16 bg-[#F4F5F7]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-[#E8201A] text-white text-[11px] font-montserrat font-bold uppercase tracking-widest px-3 py-1.5 rounded mb-4">
+              <Icon name="HelpCircle" size={13} />
+              FAQ
+            </div>
+            <h2 className="font-montserrat font-extrabold text-[#1A2340] text-[28px] md:text-[32px] mb-3">
+              Часто задаваемые вопросы
+            </h2>
+            <p className="text-[#6B7280] text-[14px] max-w-xl mx-auto">
+              Мы понимаем, что ситуации бывают разными — и готовы помочь вам найти решение. Если не нашли нужный ответ — свяжитесь с нами.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((group, gi) => (
+              <div key={gi} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                <div className="flex items-center gap-3 px-6 py-4 border-b border-gray-100">
+                  <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center">
+                    <Icon name={group.icon} size={17} className="text-[#E8201A]" fallback="HelpCircle" />
+                  </div>
+                  <h3 className="font-montserrat font-bold text-[#1A2340] text-[13px] uppercase tracking-wide">{group.category}</h3>
+                </div>
+                <div>
+                  {group.items.map((item, ii) => (
+                    <FaqItem key={ii} q={item.q} a={item.a} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CONTACTS */}
       <section id="contacts" className="py-16 bg-[#1A2340]">
         <div className="max-w-6xl mx-auto px-6">
