@@ -220,22 +220,12 @@ export default function Index() {
           <div className="flex flex-col md:flex-row items-end gap-10">
             <div className="flex-1 pb-14">
               <h1 className="font-montserrat font-black text-[#1A2340] text-[44px] md:text-[54px] leading-[1.05] uppercase mb-6">
-                ЧТО БУДЕТ,<br />ЕСЛИ Я НЕ<br />ОПЛАЧУ?
+                ЧАСТО<br />ЗАДАВАЕМЫЕ<br />ВОПРОСЫ
               </h1>
-              <p className="text-[#6B7280] text-[15px] leading-relaxed max-w-md mb-8">
-                Мы понимаем — жизнь не всегда идёт по плану. Главное — не оставлять ситуацию без внимания. Мы готовы предложить индивидуальные условия, чтобы помочь вернуться к финансовой стабильности.
-              </p>
-              <a
-                href="#contacts"
-                className="inline-flex items-center gap-2 bg-[#E8201A] hover:bg-[#C41510] text-white font-montserrat font-bold text-[12px] uppercase tracking-widest px-8 py-4 rounded transition-all duration-200 hover:shadow-lg"
-              >
-                МЫ ВСЕГДА НА СВЯЗИ
-                <Icon name="ArrowRight" size={15} />
-              </a>
             </div>
             <div className="flex-shrink-0 w-full md:w-[320px] self-end">
               <img
-                src="https://cdn.poehali.dev/projects/fead63f3-37d2-467e-b72a-5f50f9c9352f/files/2a1dd9f7-905a-4997-a086-f876929076db.jpg"
+                src="https://cdn.poehali.dev/projects/fead63f3-37d2-467e-b72a-5f50f9c9352f/files/de9f86e0-71f0-40c7-86d6-664c7e3d657c.jpg"
                 alt="Специалист банка"
                 className="w-full h-[360px] object-cover object-top rounded-t-xl shadow-xl"
               />
@@ -245,42 +235,6 @@ export default function Index() {
       </section>
 
 
-
-      {/* FAQ */}
-      <section id="faq" className="py-16 bg-[#F4F5F7]">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-[#E8201A] text-white text-[11px] font-montserrat font-bold uppercase tracking-widest px-3 py-1.5 rounded mb-4">
-              <Icon name="HelpCircle" size={13} />
-              FAQ
-            </div>
-            <h2 className="font-montserrat font-extrabold text-[#1A2340] text-[28px] md:text-[32px] mb-3">
-              Часто задаваемые вопросы
-            </h2>
-            <p className="text-[#6B7280] text-[14px] max-w-xl mx-auto">
-              Мы понимаем, что ситуации бывают разными — и готовы помочь вам найти решение. Если не нашли нужный ответ — свяжитесь с нами.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((group, gi) => (
-              <div key={gi} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
-                <div className="flex items-center gap-3 px-6 py-4 border-b border-gray-100">
-                  <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center">
-                    <Icon name={group.icon} size={17} className="text-[#E8201A]" fallback="HelpCircle" />
-                  </div>
-                  <h3 className="font-montserrat font-bold text-[#1A2340] text-[13px] uppercase tracking-wide">{group.category}</h3>
-                </div>
-                <div>
-                  {group.items.map((item, ii) => (
-                    <FaqItem key={ii} q={item.q} a={item.a} />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CONTACTS */}
       <section id="contacts" className="py-16 bg-[#1A2340]">
