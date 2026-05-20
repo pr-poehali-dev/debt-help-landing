@@ -304,7 +304,7 @@ export default function Index() {
               <div>
                 <div className="text-white/70 text-[10px] font-montserrat font-bold uppercase tracking-widest mb-1">Онлайн-чат</div>
                 <div className="text-white font-montserrat font-extrabold text-[18px]">Написать в чат</div>
-                <div className="text-white/60 text-[11px] mt-0.5">На сайте, в мобильном приложении или в чат-боте в приложении MAX</div>
+                <div className="text-white/60 text-[11px] mt-0.5">На сайте или в мобильном приложении</div>
               </div>
             </div>
           </div>
